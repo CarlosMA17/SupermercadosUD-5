@@ -47,7 +47,13 @@ public class Main {
 
                     break;
                 case "3":
-                    System.out.println(3);
+                    if (cashier.totalClients != 0) {
+                        System.out.println("se ha atendido al cliente " + cashier.clients.get(0));
+                        cashier.clients.remove(0);
+                        cashier.totalClients--;
+                    } else {
+                        System.out.println("no hay clientes que atender");
+                    }
                     break;
                 case "4":
                     System.out.println(4);
