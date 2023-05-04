@@ -1,8 +1,6 @@
 package supermarket.clients;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-
 public class Client {
     private String name;
     private int totalProducts;
