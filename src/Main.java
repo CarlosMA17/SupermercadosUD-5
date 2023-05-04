@@ -3,6 +3,7 @@ import supermarket.cashier.Cashier;
 import supermarket.clients.Client;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -31,11 +32,16 @@ public class Main {
                     break;
                 case "2":
                     ArrayList articles = new ArrayList();
-                    articles.add(Products.randomProduct());
-                    articles.add(Products.randomProduct());
-                    articles.add(Products.randomProduct());
-                    articles.add(Products.randomProduct());
-                    Client client = new Client(Products.randomPerson(), 4, articles );
+                    int numberOfProducts = new Random().nextInt(10 + 1);
+                    for (int i = 0; i < numberOfProducts; i++) {
+                        articles.add(Products.randomProduct());
+                    }
+                    System.out.println(numberOfProducts);
+                    System.out.println(articles);
+                    Client client = new Client(Products.randomPerson(), numberOfProducts, articles );
+                    cashier.totalClients++;
+                    cashier.clients.add(client);
+                    System.out.println(client.mainToString());
                     break;
                 case "3":
                     System.out.println(3);

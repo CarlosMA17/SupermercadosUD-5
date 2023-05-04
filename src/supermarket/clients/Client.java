@@ -16,8 +16,7 @@ public class Client {
         return name;
     }
 
-    @Override
-    public String toString() {
+    public String mainToString() {
         return "===================================\n" +
                 "* Nombre: <" + this.getName() + ">\n" +
                 "* Total de productos: <" + this.totalProducts + ">\n" +
@@ -25,5 +24,11 @@ public class Client {
                 "<" + this.articles.get(0) + ">\n" +
                 "<" + this.articles.get(1) + ">\n" +
                 "===================================";
+    }
+
+    @Override
+    public String toString() {
+        return "===================================\n" +
+                "* Nombre: <" + this.getName();
     }
 }
