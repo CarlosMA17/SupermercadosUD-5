@@ -1,12 +1,16 @@
 package supermarket.cashier;
 import supermarket.clients.Client;
 
-import java.util.Arrays;
 
 public class Cashier {
-    private int cashierNumber;
+    public int cashierNumber;
     private int totalClients;
     private Client[] clients;
+
+    public Cashier(int cashierNumber, int totalClients) {
+        this.cashierNumber = cashierNumber;
+        this.totalClients = totalClients;
+    }
 
     @Override
     public String toString() {
