@@ -39,6 +39,6 @@ public class Client {
 
     @Override
     public String toString() {
-        return "* Nombre: <" + this.getName();
+        return "* Nombre: <" + this.getName() + ">";
     }
 }

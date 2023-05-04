@@ -3,7 +3,6 @@ import supermarket.cashier.Cashier;
 import supermarket.clients.Client;
 
 import java.util.ArrayList;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -56,13 +55,15 @@ public class Main {
                     }
                     break;
                 case "4":
-                    System.out.println(4);
+                    System.out.println(cashier.clients + " id cajero: " + cashier.cashierNumber);
                     break;
                 case "5":
-                    System.out.println(5);
+                    System.out.println("cerrando supermercado");
+                    cashier = null;
+                    exit = false;
                     break;
                 default:
-                    System.out.println(0);
+                    System.out.println("determine una opcion valida");
                     break;
             }
         }
