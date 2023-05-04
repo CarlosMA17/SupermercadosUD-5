@@ -1,12 +1,15 @@
 import supermarket.Products;
 import supermarket.cashier.Cashier;
+import supermarket.clients.Client;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
         boolean exit = true;
+        Cashier cashier = new Cashier();
 
         while(exit) {
             System.out.println("elija una opcion:\n" +
@@ -19,11 +22,20 @@ public class Main {
             String option = sc.nextLine();
             switch (option) {
                 case "1":
-                    System.out.println("abriendo caja");
-                    Cashier cashier = new Cashier(1, 0);
+                    if(cashier==null ) {
+                        System.out.println("Caja ya abierta");
+                    } else {
+                        System.out.println("abriendo caja");
+                        cashier = new Cashier(1, 0);
+                    }
                     break;
                 case "2":
-                    System.out.println(2);
+                    ArrayList articles = new ArrayList();
+                    articles.add(Products.randomProduct());
+                    articles.add(Products.randomProduct());
+                    articles.add(Products.randomProduct());
+                    articles.add(Products.randomProduct());
+                    Client client = new Client(Products.randomPerson(), 4, articles );
                     break;
                 case "3":
                     System.out.println(3);

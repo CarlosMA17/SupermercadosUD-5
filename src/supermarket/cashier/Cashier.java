@@ -13,6 +13,9 @@ public class Cashier {
         this.totalClients = totalClients;
     }
 
+    public Cashier() {
+    }
+
     @Override
     public String toString() {
         return "===================================\n" +
