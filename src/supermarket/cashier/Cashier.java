@@ -8,6 +8,11 @@ public class Cashier {
     private int totalClients;
     private Client[] clients;
 
+    public Cashier(int cashierNumber, int totalClients) {
+        this.cashierNumber = cashierNumber;
+        this.totalClients = totalClients;
+    }
+
     @Override
     public String toString() {
         return "===================================\n" +

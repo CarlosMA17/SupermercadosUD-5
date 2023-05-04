@@ -1,4 +1,5 @@
 import supermarket.Products;
+import supermarket.cashier.Cashier;
 
 import java.util.Scanner;
 
@@ -18,7 +19,8 @@ public class Main {
             String option = sc.nextLine();
             switch (option) {
                 case "1":
-                    System.out.println(1);
+                    System.out.println("abriendo caja");
+                    Cashier cashier = new Cashier(1, 0);
                     break;
                 case "2":
                     System.out.println(2);
