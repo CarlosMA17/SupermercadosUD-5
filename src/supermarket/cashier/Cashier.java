@@ -1,5 +1,5 @@
-package Supermarket.Clients.Cashier;
-import Supermarket.Clients.Client;
+package supermarket.cashier;
+import supermarket.clients.Client;
 
 public class Cashier {
     private int cashierNumber;

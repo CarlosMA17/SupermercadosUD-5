@@ -1,4 +1,4 @@
-import Supermarket.Products;
+import supermarket.Products;
 
 public class Main {
 

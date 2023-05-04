@@ -1,4 +1,4 @@
-package Supermarket.Clients;
+package supermarket.clients;
 
 public class Client {
     private String name;
