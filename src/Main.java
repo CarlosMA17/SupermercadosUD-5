@@ -23,7 +23,7 @@ public class Main {
             String option = sc.nextLine();
             switch (option) {
                 case "1":
-                    if(cashier==null ) {
+                    if(cashier.cashierNumber==1 ) {
                         System.out.println("Caja ya abierta");
                     } else {
                         System.out.println("abriendo caja");
@@ -32,16 +32,19 @@ public class Main {
                     break;
                 case "2":
                     ArrayList articles = new ArrayList();
-                    int numberOfProducts = new Random().nextInt(10 + 1);
+                    int numberOfProducts = (int)(Math. random()*10+1); ;
                     for (int i = 0; i < numberOfProducts; i++) {
                         articles.add(Products.randomProduct());
                     }
-                    System.out.println(numberOfProducts);
-                    System.out.println(articles);
                     Client client = new Client(Products.randomPerson(), numberOfProducts, articles );
-                    cashier.totalClients++;
-                    cashier.clients.add(client);
-                    System.out.println(client.mainToString());
+                    if(cashier.cashierNumber==1 ) {
+                        cashier.totalClients++;
+                        cashier.clients.add(client);
+                        System.out.println(client.mainToString());
+                    } else {
+                        System.out.println("la caja esta cerrada");
+                    }
+
                     break;
                 case "3":
                     System.out.println(3);

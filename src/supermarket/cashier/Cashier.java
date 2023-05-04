@@ -2,7 +2,7 @@ package supermarket.cashier;
 import java.util.ArrayList;
 
 public class Cashier {
-    private int cashierNumber;
+    public int cashierNumber;
     public int totalClients;
     public ArrayList clients = new ArrayList();
 
